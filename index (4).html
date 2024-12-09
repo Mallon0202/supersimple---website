@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marlon Delos Santos - Portfolio</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #121212; /* Dark background */
+            color: #fff;
+            line-height: 1.6;
+            font-size: 1rem;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* Portfolio Section */
+        .portfolio {
+            padding: 100px 20px;
+            background-color: #181818;
+            color: #fff;
+            animation: fadeInUp 2s ease-out;
+        }
+
+        .portfolio h2 {
+            font-size: 3.5em;
+            color: #FF4081;
+            text-align: center;
+            margin-bottom: 50px;
+            animation: gradientText 3s infinite alternate;
+        }
+
+        .portfolio-video {
+            max-width: 100%;
+            margin: 0 auto;
+            display: block;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+            cursor: pointer;
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.1);
+            filter: brightness(60%);
+        }
+
+        .portfolio-item .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            text-align: center;
+            font-size: 2em;
+            border-radius: 15px;
+        }
+
+        .portfolio-item:hover .overlay {
+            opacity: 1;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1001;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #333;
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .modal-content img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 2em;
+            color: white;
+            cursor: pointer;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    Welcome to My Website
+</header>
+
+<div class="content">
+    <p class="name">Marlon Delos Santos</p>
+    <p class="description">Welcome to my personal portfolio! Explore my work and let's create something extraordinary together. Dive into my projects below.</p>
+    <div class="social-links">
+        <a href="https://www.facebook.com/profile.php?id=61560316144084" target="_blank">Visit My Facebook</a>
+        <a href="mailto:marloncorpuz020206@gmail.com">Email Me</a>
+    </div>
+</div>
+
+<!-- Portfolio Section -->
+<div class="portfolio">
+    <h2>My Portfolio</h2>
+
+    <!-- Video Section -->
+    <div class="portfolio-video">
+        <video width="100%" height="auto" controls>
+            <source src="https://video.xx.fbcdn.net/v/t42.3356-2/469601390_8932669076772279_4549772371548306280_n.mp4?_nc_cat=108&ccb=1-7&_nc_sid=4f86bc&_nc_eui2=AeHW2agvUNVYze_PI7ZJU_Y5GSH3_SPSxy8ZIff9I9LHL5RX05qK6yG4XznIf2TwiHNl48iH7BaWTXtBUnP6sxtp&_nc_ohc=aKwM-7kkHjUQ7kNvgH0evsn&_nc_zt=28&_nc_ht=scontent.fcrk3-4.fna&_nc_gid=AfNs9imZGWtn2Q9saPzuBFs&oh=03_Q7cD1QGOXY_3_InPECaZ-V_V7quzSDu4-xNY1-piCZlIxcANzQ&oe=6758BC49&dl=1" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Portfolio Grid -->
+    <div class="portfolio-grid">
+        <div class="portfolio-item">
+            <img src="https://via.placeholder.com/300x200" alt="Project 1">
+            <div class="overlay">Project 1</div>
+        </div>
+        <div class="portfolio-item">
+            <img src="https://via.placeholder.com/300x200" alt="Project 2">
+            <div class="overlay">Project 2</div>
+        </div>
+        <!-- Add more portfolio items here -->
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    &copy; 2024 Marlon Delos Santos. All Rights Reserved.
+</footer>
+
+</body>
+</html>
